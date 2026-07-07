@@ -57,28 +57,28 @@ Today's Schedule
 ----------------------------------------------------------------------------------------
 Date         Time   Pet        Task                   Priority Status     Type        
 ----------------------------------------------------------------------------------------
-2026-07-06   07:30  Milo       Breakfast              High     ⏳ Pending  Feeding     
-2026-07-06   08:30  Luna       Morning walk           High     ⏳ Pending  Exercise    
-2026-07-06   08:30  Milo       Give medicine          High     ⏳ Pending  Medication  
-2026-07-06   14:00  Luna       Vet checkup            Medium   ⏳ Pending  Appointment 
+2026-07-06   07:30  Milo       Breakfast              High      Pending  Feeding     
+2026-07-06   08:30  Luna       Morning walk           High      Pending  Exercise    
+2026-07-06   08:30  Milo       Give medicine          High      Pending  Medication  
+2026-07-06   14:00  Luna       Vet checkup            Medium    Pending  Appointment 
 
 Pending tasks for Luna:
 Luna Pending Tasks
 ----------------------------------------------------------------------------------------
 Date         Time   Pet        Task                   Priority Status     Type        
 ----------------------------------------------------------------------------------------
-2026-07-06   08:30  Luna       Morning walk           High     ⏳ Pending  Exercise    
-2026-07-06   14:00  Luna       Vet checkup            Medium   ⏳ Pending  Appointment 
+2026-07-06   08:30  Luna       Morning walk           High      Pending  Exercise    
+2026-07-06   14:00  Luna       Vet checkup            Medium    Pending  Appointment 
 
 Priority-based schedule:
 Priority Schedule
 ----------------------------------------------------------------------------------------
 Date         Time   Pet        Task                   Priority Status     Type        
 ----------------------------------------------------------------------------------------
-2026-07-06   07:30  Milo       Breakfast              High     ⏳ Pending  Feeding     
-2026-07-06   08:30  Luna       Morning walk           High     ⏳ Pending  Exercise    
-2026-07-06   08:30  Milo       Give medicine          High     ⏳ Pending  Medication  
-2026-07-06   14:00  Luna       Vet checkup            Medium   ⏳ Pending  Appointment 
+2026-07-06   07:30  Milo       Breakfast              High      Pending  Feeding     
+2026-07-06   08:30  Luna       Morning walk           High      Pending  Exercise    
+2026-07-06   08:30  Milo       Give medicine          High      Pending  Medication  
+2026-07-06   14:00  Luna       Vet checkup            Medium    Pending  Appointment 
 
 Conflict warnings:
 ⚠️  Conflict on 2026-07-06 at 08:30: Luna: Morning walk | Milo: Give medicine
@@ -88,11 +88,11 @@ Schedule After Recurrence
 ----------------------------------------------------------------------------------------
 Date         Time   Pet        Task                   Priority Status     Type        
 ----------------------------------------------------------------------------------------
-2026-07-06   07:30  Milo       Breakfast              High     ⏳ Pending  Feeding     
-2026-07-06   08:30  Luna       Morning walk           High     ✅ Done     Exercise    
-2026-07-06   08:30  Milo       Give medicine          High     ⏳ Pending  Medication  
-2026-07-06   14:00  Luna       Vet checkup            Medium   ⏳ Pending  Appointment 
-2026-07-07   08:30  Luna       Morning walk           High     ⏳ Pending  Exercise    
+2026-07-06   07:30  Milo       Breakfast              High      Pending  Feeding     
+2026-07-06   08:30  Luna       Morning walk           High      Done     Exercise    
+2026-07-06   08:30  Milo       Give medicine          High      Pending  Medication  
+2026-07-06   14:00  Luna       Vet checkup            Medium    Pending  Appointment 
+2026-07-07   08:30  Luna       Morning walk           High      Pending  Exercise    
 
 Next available slot today between 07:30 and 09:00: 08:00
 
@@ -131,6 +131,8 @@ The tests cover:
 - Saving and loading data with JSON persistence
 
 ## 📐 Smarter Scheduling
+
+The CLI output is formatted using `Scheduler.format_schedule()`, which creates readable table-style output for schedules, priorities, task types, and task status.
 
 | Feature | Method(s) | Notes |
 |---------|-----------|-------|
