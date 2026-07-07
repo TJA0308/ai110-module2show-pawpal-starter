@@ -1,5 +1,4 @@
 __pycache__/
-.venv/
-.venv_new/
+*.pyc
 .pytest_cache/
-.DS_Store
+pawpal_data.json
