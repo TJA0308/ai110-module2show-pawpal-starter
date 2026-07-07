@@ -139,9 +139,9 @@ The tests cover:
 | Filtering | `Scheduler.filter_tasks()` | Filters tasks by pet name, completion status, or task type |
 | Conflict handling | `Scheduler.detect_conflicts()` | Detects tasks scheduled for the exact same date and time |
 | Recurring tasks | `Scheduler.complete_task()` | Marks a task complete and creates the next daily/weekly occurrence |
-| Priority scheduling | `Scheduler.sort_by_priority()` | Sorts high-priority tasks before medium and low-priority tasks |
+| Priority scheduling | `Scheduler.sort_by_priority_then_time()` | Sorts high-priority tasks before medium and low-  priority tasks |
 | Next available slot | `Scheduler.next_available_slot()` | Finds an open time slot within a given time window |
-| JSON persistence | `Owner.save_to_json()`, `Owner.load_from_json()` | Saves and reloads owner, pet, and task data between runs |
+| JSON persistence | `Scheduler.save_to_json(), Scheduler.load_from_json()` | Saves and reloads owner, pet, and task data between runs |
 
 ## 📸 Demo Walkthrough
 

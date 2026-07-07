@@ -300,7 +300,7 @@ class Scheduler:
         ]
 
         for pet, task in task_pairs:
-            status = "✅ Done" if task.completed else "⏳ Pending"
+            status = "Done" if task.completed else " Pending"
             lines.append(
                 f"{task.due_date.isoformat():<12} {task.due_time:<6} "
                 f"{pet.name:<10} {task.description:<22} {task.priority:<8} "
