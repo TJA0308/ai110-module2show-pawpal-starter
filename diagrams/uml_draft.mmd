@@ -1,3 +1,4 @@
+%% Draft UML created during initial system design. Final version was updated in uml_final.mmd after implementation.
 classDiagram
     class Owner {
         +str name
@@ -38,7 +39,7 @@ classDiagram
         +filter_tasks(pet_name, completed, task_type)
         +detect_conflicts()
         +complete_task(pet_name, description)
-        +next_available_slot(start_time, end_time, interval_minutes)
+        +next_available_slot(due_date, start_time, end_time, interval_minutes)
         +save_to_json(file_path)
         +load_from_json(file_path)
         +format_schedule(tasks, title)

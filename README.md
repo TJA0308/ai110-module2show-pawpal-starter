@@ -126,7 +126,6 @@ The tests cover:
 - Marking a task complete
 - Adding a task to a pet
 - Sorting tasks by due date and time
-- Filtering tasks by pet, status, or task type
 - Detecting scheduling conflicts
 - Creating recurring daily tasks
 - Saving and loading data with JSON persistence

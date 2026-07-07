@@ -6,6 +6,7 @@ from pawpal_system import Owner, Pet, Scheduler, Task
 
 
 def build_demo_scheduler() -> Scheduler:
+
     """Create a demo owner with pets and tasks."""
     today = date.today()
 
@@ -39,7 +40,7 @@ def main() -> None:
 
     print("\nConflict warnings:")
     for warning in scheduler.detect_conflicts():
-        print(f"⚠️  {warning}")
+        print(f"WARNING: {warning}")
 
     print("\nCompleting Luna's daily walk...")
     scheduler.complete_task("Luna", "Morning walk")
