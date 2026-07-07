@@ -1,0 +1,51 @@
+classDiagram
+    class Owner {
+        +str name
+        +str email
+        +list~Pet~ pets
+        +add_pet(pet)
+        +list_pets()
+        +get_all_tasks()
+    }
+
+    class Pet {
+        +str name
+        +str species
+        +str breed
+        +list~Task~ tasks
+        +add_task(task)
+        +list_tasks()
+        +get_pending_tasks()
+    }
+
+    class Task {
+        +str description
+        +date due_date
+        +str due_time
+        +str priority
+        +bool completed
+        +str recurrence
+        +str task_type
+        +mark_complete()
+        +is_pending()
+        +create_next_occurrence()
+    }
+
+    class Scheduler {
+        +Owner owner
+        +all_tasks()
+        +sort_by_time()
+        +sort_by_priority_then_time()
+        +filter_tasks(pet_name, completed, task_type)
+        +detect_conflicts()
+        +complete_task(pet_name, description)
+        +next_available_slot(start_time, end_time)
+        +save_to_json(file_path)
+        +load_from_json(file_path)
+        +format_schedule(tasks, title)
+    }
+
+    Owner "1" --> "*" Pet : owns
+    Pet "1" --> "*" Task : has
+    Scheduler --> Owner : manages
+    Scheduler --> Task : organizes
